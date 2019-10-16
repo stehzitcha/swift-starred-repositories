@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_starred_repositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rgl-Aj-Hmp">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" id="ncb-Bn-wFB" customClass="ViewControllerCell" customModule="swift_starred_repositories" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ncb-Bn-wFB" id="Z2Z-8j-Hjw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lii-as-rD6">
+                                                    <rect key="frame" x="23" y="25" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="t8T-w0-JHd"/>
+                                                        <constraint firstAttribute="height" constant="50" id="z2J-ay-mQd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIC-nH-KSE">
+                                                    <rect key="frame" x="95" y="16" width="260" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-6v-sEg">
+                                                    <rect key="frame" x="95" y="71.5" width="260" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-o4-SUf">
+                                                    <rect key="frame" x="95" y="43.5" width="260" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XIC-nH-KSE" firstAttribute="leading" secondItem="Lii-as-rD6" secondAttribute="trailing" constant="22" id="0e9-GP-bUY"/>
+                                                <constraint firstItem="gWh-6v-sEg" firstAttribute="height" secondItem="XIC-nH-KSE" secondAttribute="height" id="4YT-YK-h26"/>
+                                                <constraint firstItem="gWh-6v-sEg" firstAttribute="leading" secondItem="Lii-as-rD6" secondAttribute="trailing" constant="22" id="9N1-6C-9UI"/>
+                                                <constraint firstItem="bgI-o4-SUf" firstAttribute="leading" secondItem="Lii-as-rD6" secondAttribute="trailing" constant="22" id="JrC-8f-MqP"/>
+                                                <constraint firstItem="XIC-nH-KSE" firstAttribute="top" secondItem="Z2Z-8j-Hjw" secondAttribute="topMargin" constant="5" id="L5v-XD-6v7"/>
+                                                <constraint firstItem="gWh-6v-sEg" firstAttribute="bottom" secondItem="Z2Z-8j-Hjw" secondAttribute="bottomMargin" constant="5" id="Nl0-Cv-gbK"/>
+                                                <constraint firstItem="gWh-6v-sEg" firstAttribute="top" secondItem="bgI-o4-SUf" secondAttribute="bottom" constant="5" id="TnA-PP-sSw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XIC-nH-KSE" secondAttribute="trailing" constant="5" id="XYp-Ln-wso"/>
+                                                <constraint firstItem="bgI-o4-SUf" firstAttribute="height" secondItem="XIC-nH-KSE" secondAttribute="height" id="hZb-qK-eVe"/>
+                                                <constraint firstItem="Lii-as-rD6" firstAttribute="centerY" secondItem="Z2Z-8j-Hjw" secondAttribute="centerY" id="hdy-pg-2m8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gWh-6v-sEg" secondAttribute="trailing" constant="5" id="lUm-ij-4XI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bgI-o4-SUf" secondAttribute="trailing" constant="5" id="mRR-kI-JbT"/>
+                                                <constraint firstItem="bgI-o4-SUf" firstAttribute="top" secondItem="XIC-nH-KSE" secondAttribute="bottom" constant="5" id="nB6-eL-yxs"/>
+                                                <constraint firstItem="Lii-as-rD6" firstAttribute="leading" secondItem="Z2Z-8j-Hjw" secondAttribute="leadingMargin" constant="8" id="v5L-ry-bbj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="uiLabelRepoName" destination="XIC-nH-KSE" id="vjq-u2-EhM"/>
+                                            <outlet property="uiLabelRepoOwnerName" destination="gWh-6v-sEg" id="NLk-WV-T2a"/>
+                                            <outlet property="uiLabelRepoStars" destination="bgI-o4-SUf" id="itk-PY-Z2H"/>
+                                            <outlet property="uiRepoOwnerImage" destination="Lii-as-rD6" id="gCG-eX-tvP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rgl-Aj-Hmp" secondAttribute="bottom" id="7kL-S5-rU7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rgl-Aj-Hmp" secondAttribute="trailing" id="BQn-fz-uZm"/>
+                            <constraint firstItem="rgl-Aj-Hmp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vb4-pt-EOk"/>
+                            <constraint firstItem="rgl-Aj-Hmp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="yaj-wi-36n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="uiTableView" destination="rgl-Aj-Hmp" id="6zS-f7-JcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="47.226386806596707"/>
+        </scene>
+    </scenes>
+</document>
