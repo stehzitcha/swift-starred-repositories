@@ -62,7 +62,6 @@ extension ViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-//        print("offsetY: \(offsetY) | contentHeight: \(contentHeight)")
         
         if offsetY > contentHeight - scrollView.frame.height {
             if !isFetching {
